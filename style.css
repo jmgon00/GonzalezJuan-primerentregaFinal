@@ -3,8 +3,9 @@ body{
     margin: 0;
     background-color: darkslategray;  
 }
-
 .section1{ 
+
+
     background-color: aqua;
     width: 100%;
  
@@ -25,6 +26,7 @@ body{
 }
 
 
+/* 
 .navSecundario{
     margin: 15px 50px;
 }
@@ -46,7 +48,7 @@ body{
     height: 200px;
     margin-bottom: 30px;
     object-fit: cover;
-    /* object-position: top; */
+   
     filter: brightness(70%);
     cursor: pointer;
     animation: escalar 1.1s infinite alternate;
@@ -63,4 +65,5 @@ body{
 .containerImg:hover{
     filter: brightness(100%);
     
-}
+} */
+
