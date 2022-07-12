@@ -75,3 +75,12 @@ const botonClickAca = document.getElementById("btnProducto1");
     console.log("respuesta click");
 } */
 botonClickAca.addEventListener("click", () => console.log("click"));
+
+let nombre = document.getElementById("nombre");
+nombre.addEventListener("keyup", (e) => {
+    if(e.key != "Enter"){
+        
+    }else{
+        alert("presiono enter")
+    }
+});
