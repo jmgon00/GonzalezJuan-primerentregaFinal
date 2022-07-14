@@ -74,13 +74,49 @@ const botonClickAca = document.getElementById("btnProducto1");
 /* function respuestaClick(){
     console.log("respuesta click");
 } */
-botonClickAca.addEventListener("click", () => console.log("click"));
+botonClickAca.addEventListener("click", () => console.log("Hiciste click"));
 
-let nombre = document.getElementById("nombre");
-nombre.addEventListener("keyup", (e) => {
+/* let nombre = document.getElementById("nombre"); */
+/* nombre.addEventListener("keyup", (e) => {
     if(e.key != "Enter"){
         
     }else{
         alert("presiono enter")
+        
+    }
+}); */
+
+
+//evento change
+//nombre.addEventListener("change", () => console.log("Te saliste del campo"));
+
+//evento input
+let maxDigitos = document.getElementById("maxDigitos");
+
+//validacion para que no exceda el maximo de 15 caracteres
+maxDigitos.addEventListener("input", () => {
+    if (maxDigitos.value.length === 15){
+        alert("Te excediste de los 15 digitos")
     }
 });
+
+/*Error no se valida en el segundo input con la misma clase la condicion******************/
+
+//evento submit
+let form = document.getElementById("form");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let info = e.target;
+    console.log("El nombre ingresado es: " + info.children[0].value);
+    console.log("El nombre ingresado es: " + info.children[1].value);
+    if(!info.children[2].value.includes("@")){
+        alert("El campo campo Email no contiene @");
+    }else if (info.children[2].value.includes("@") && info.children[2].value.includes(".")){
+        alert("formulario enviado");
+    }else{
+        info.children[2].value = "";
+        alert("Correo electrónico incorrecto");
+
+    }
+})
+
