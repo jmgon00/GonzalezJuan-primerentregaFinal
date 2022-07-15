@@ -67,3 +67,37 @@ body{
     
 } */
 
+.sectionContainerProductos{
+    display: grid;
+    justify-content: center;
+   
+}
+
+.divContainerProductos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 1200px;
+    min-width: 400px;
+    padding: 0 10px;
+    
+
+}
+.btnProductoOfertas{
+    margin-bottom:100px;
+}
+.productosCarrito{
+    display: grid;
+    
+    text-align: center;
+    margin-bottom: 80px;
+ 
+   
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+}

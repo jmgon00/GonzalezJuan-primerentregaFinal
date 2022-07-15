@@ -52,20 +52,22 @@ let listaProductos = [
     {id: 1, nombre: "paleta", precio: 15000, descripcion: "wilson", imagen: "./img/wilson.png"},
     {id: 2, nombre: "paleta", precio: 30000, descripcion: "bullpadel", imagen: "./img/bullpadel.png"},
     {id: 3, nombre: "paleta", precio: 45000, descripcion: "adiddas", imagen: "./img/adiddas.png"},
-    {id: 4, nombre: "zapatillas", precio: 10000, descripcion: "fila", imagen: "./img/fila.jpg"},
-    {id: 5, nombre: "zapatillas", precio: 9000, descripcion: "topper", imagen: "./img/zapatillas toper.jpg"},
-    {id: 6, nombre: "zapatillas", precio: 12000, descripcion: "adiddas", imagen: "./img/z-adidas.jpg"},
+    {id: 4, nombre: "zapatillas", precio: 10000, descripcion: "fila", imagen: "./img/fila.png"},
+    {id: 5, nombre: "zapatillas", precio: 9000, descripcion: "topper", imagen: "./img/zapatillas toper.png"},
+    {id: 6, nombre: "zapatillas", precio: 12000, descripcion: "adiddas", imagen: "./img/z-adidas.png"},
 ];
 
 
 /* listaProductos.push(prodcutoAgregar); */
 for(const producto of listaProductos){
     let item = document.createElement("div");
-    item.innerHTML = `<h4>ID: ${producto.id}</h4>
-                    <p>Producto: ${producto.nombre}</p>
+    item.innerHTML = `<h2>${producto.nombre}</h2>
+                      <h4>${producto.descripcion}</h4>  
                     <b>Precio: ${producto.precio}</b>
+                    <h6>ID: ${producto.id}</h6>
                     <img src="${producto.imagen}">
                     `;
+    item.className += "productosCarrito";
     container.append(item);
     
 }
@@ -74,7 +76,7 @@ const botonClickAca = document.getElementById("btnProducto1");
 /* function respuestaClick(){
     console.log("respuesta click");
 } */
-botonClickAca.addEventListener("click", () => console.log("Hiciste click"));
+botonClickAca.addEventListener("click", () => console.log("Hiciste click en ver ofertas"));
 
 /* let nombre = document.getElementById("nombre"); */
 /* nombre.addEventListener("keyup", (e) => {
@@ -107,16 +109,14 @@ let form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     let info = e.target;
-    console.log("El nombre ingresado es: " + info.children[0].value);
     console.log("El nombre ingresado es: " + info.children[1].value);
-    if(!info.children[2].value.includes("@")){
-        alert("El campo campo Email no contiene @");
-    }else if (info.children[2].value.includes("@") && info.children[2].value.includes(".")){
+    console.log("El apellido ingresado es: " + info.children[2].value);
+    if (info.children[3].value.includes("@") && info.children[3].value.includes(".")){
         alert("formulario enviado");
-    }else{
-        info.children[2].value = "";
-        alert("Correo electrónico incorrecto");
-
+    }else if(!info.children[3].value.includes("@")){
+        alert("El campo campo Email no contiene @");
+        info.children[3].value = "";
+        console.log("Correo electrónico incorrecto");
     }
 })
 
