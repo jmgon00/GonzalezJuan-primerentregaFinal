@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primera entrega del Proyecto Final</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
 </head>
@@ -17,64 +19,42 @@
                 Padel Store
               </a>
               <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search">
+                <!-- <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search"> -->
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
               </form>
             </div>
         </nav>
     </header>
     <main>
-      <div class="navSecundario">
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Categorias</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Carrito</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" >FAQs</a>
-            </li>
-          </ul>
-
-      </div>
-        <h2 class="h2Section1">Elegi el producto que estabas buscando</h2>
-        <p class="pSection1">Todos nuestros prodcutos de excelente calidad a solo un click</p>    
-      <!-- <section>
-            <div class="containerPrincipal_img">
-                <div class="producto">
-                    <img src="/img/wilson.png" alt="" class="containerImg">
-                </div>
-                <div class="producto">
-                    <img src="/img/bullpadel.png" alt="" class="containerImg" >
-                </div>
-                <div class="producto">
-                    <img src="/img/adiddas.png" alt="" class="containerImg">
-                </div>
-                <div class="producto">
-                    <img src="/img/fila.jpg" alt="" class="containerImg" >
-                </div>
-                <div class="producto">
-                    <img src="/img/zapatillas toper.jpg" alt="" class="containerImg">
-                </div>
-                <div class="producto">
-                    <img src="/img/z-adidas.jpg" alt="" class="containerImg">
-              </div>
-        </section> -->
+        <!-- <div>
+          <h2 id="h2divUsuario"></h2>
+          <h4 id="h4divUsuario"></h4>
+        </div> -->
+        <div class="row g-3 divMsjUser">
+          <div class="col"  >
+            <label >Usuario en sesion:</label>
+            <p type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="h2divUsuario">
+            </p>
+          <div class="col">
+            <label >Pais o Región:</label>
+            <p type="text" class="form-control" placeholder="País" aria-label="País"  id="h4divUsuario">
+            </p>
+        </div>
+        <div class="navSecundario">
+          <h2 class="h2Section1">Elegi el producto que estabas buscando</h2>
+          <p class="pSection1">Todos nuestros prodcutos de excelente calidad a solo un click</p>
+        </div>    
         
         <section class="sectionContainerProductos">
           <div id="divFormAdmin" class="divContainerProductos">
           </div>
-          <button id="btnProducto1" class="btnProductoOfertas">LAS MEJORES OFERTAS</button>
-         <!-- <input type="text" id="nombre"> -->
+          <button id="btnProducto1" class="btnProductoOfertas">CONSULTAR DISPONIBILIDAD</button>
+        
         <form id="form" class="form">
-          <p>Formulario</p>
+          <p class="pForm">Formulario</p>
           <input type="text" placeholder="Nombre" id="maxDigitos">
           <input type="text" placeholder="Apellido" id="maxDigitos">
-          <input type="text" placeholder="Correo electrónico">
+          <input type="text" placeholder="Correo electrónico" id="inputEmail">
           <input type="number">
           <input type="submit" value="Enviar">
         </form>
@@ -83,7 +63,12 @@
           
 
     </main>
-
+    <footer class="footer">
+      <p class="pFooter">Seguime en las redes sociales <span>
+          <a href="#">Facebook</a> <a href="#">Instagram</a></span>
+      </p>
+  </footer>
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
