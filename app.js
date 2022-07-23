@@ -17,7 +17,7 @@ for(const producto of listaProductos){
     item.innerHTML = `<h2>${producto.nombre}</h2>
                       <h4>${producto.descripcion}</h4>  
                     <b>Precio: $ ${producto.precio}</b>
-                    <h6>ID: ${producto.id}</h6>
+                    <h6>ID DE PRODUCTO: ${producto.id}</h6>
                     <img src="${producto.imagen}">
                     `;
     item.className += "productosCarrito";
@@ -40,7 +40,7 @@ if(userStorage){
 
     alert(response);
 }else {
-    user = prompt("Ingrese su nombre").toLowerCase();
+    user = prompt("Ingrese su nombre");
     pais = prompt("Ingrese su país")
    
    
