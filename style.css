@@ -1,7 +1,7 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: rgb(84, 136, 136); 
+    background-color: #2f2f2f; 
     overflow-x: hidden;
     font-family: 'Bebas Neue', cursive;
     
@@ -34,6 +34,12 @@ body{
     color: yellowgreen;
     
 }
+/* 
+.btnPrecios{
+    margin-left: 50%;
+    margin-bottom: 30px;
+} */
+
 .divPrimeroDatosUser{
     display: flex;
     justify-content: center;
@@ -51,6 +57,14 @@ body{
 .sectionContainerProductos{
     display: grid;
     justify-content: center;
+    background-image: url(/img/fondo5.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 200px;
    
 }
 
@@ -64,10 +78,31 @@ body{
     
 
 }
+
+.btnAgregarCarrito{
+    background-color: #a0aeb2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 50%;
+    margin-left: 80px;
+}
+
+.btnAgregarCarrito:hover{
+    background-color: white;
+}
+
+
+
+
 .btnProductoOfertas{
     margin-bottom:50px;
     font-size: 40px;
     background-color: rgb(48, 93, 50);
+}
+
+.btnProductoOfertas:hover{
+    color: rgb(197, 251, 1);
 }
 .productosCarrito{
     display: grid;
@@ -100,25 +135,159 @@ body{
     font-size: 10px;
     color: black;
 }
+
+/*formulario carrito de compras*/
+
+.sectionForms{
+    
+    background-image: url(/img/fondo4.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*eje x*/
+    align-items: center;
+
+
+    
+}
+.divFormCarrito{
+    background-color:whitesmoke;
+    
+    width: 600px;
+    height: 700px;
+    border-radius: 40px;
+    margin-top: 200px;
+    
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+   text-align: center;
+   box-shadow:0px 1px 100px 20px rgb(0, 0, 0, 1.80) ;
+  
+   
+   
+}
+
+    .lFormCarrito{
+        margin: 10px 10px;
+    }
+
+    .inputNombreFormCarrito{
+        background-color: #2F755D;
+        height: 80px;
+        width: 500px;
+        margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inputPrecioFormCarrito{
+        background-color: #2F755D;
+        height: 80px;
+        width: 500px;
+        margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inputCantidadFormCarrito{
+        background-color: #2F755D;
+        height: 80px;
+        width: 500px;
+        margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inputSubtotalFormCarrito{
+        background-color: #2F755D;
+        height: 80px;
+        width: 500px;
+        margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inputTotalFormCarrito{
+        background-color: #2F755D;
+        height: 80px;
+        width: 500px;
+        margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+
+
 /*formulario*/
 
 .form{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-bottom: 30px;
-    font-size: 20px;
-
+   width: 700px;
+    margin-top: 400px;
+    margin-bottom: 200px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(255, 255, 255, 0.6);
+    border-radius: 15px;
+    text-align: start;
+   
 }
 .pForm{
-    color: white;
-}
-#maxDigitos{
-    color:white;
+    
+    color: black;
+   
+    
 }
 
-#inputEmail{
-    color: white;
+.nombreFormContacto{
+    color:black;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.apellidoFormContacto{
+    color: black;
+    width: 500px;
+    margin-bottom: 10px;
+
+}
+.inputTextForm{
+    color: black;
+    height: 400px;
+    width: 600px;
+    margin-bottom: 10px;
+
+    text-align:start;
+    background-size: contain;
+}
+
+.inputEmail{
+    color: black;
+    width: 500px;
+    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.btnEnviarForm{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.imgFooter{
+    height: 60px;
+    width: 150px;
 }
 
 
