@@ -34,7 +34,49 @@ for(const producto of listaProductos){
 
 const contenedorProductos = document.getElementById('contenedor-productos');
 const contenedorCarrito = document.getElementById("carrito-contenedor");
+const botonVaciar = document.getElementById("vaciar-carrito");
+const contadorCarrito = document.getElementById("contadorCarrito");
+const precioTotal = document.getElementById("precioTotal");
+
 let carrito = [];
+
+//localStorage
+/* document.addEventListener('DOMContentLoaded', () => {
+  if(localStorage.getItem('carrito')){
+    carrito = JSON.parse(localStorage.getItem('carrito'))
+    actCarrito();
+  }
+
+  
+}) */
+
+//vaciar carrito 
+botonVaciar.addEventListener("click", () =>{
+  Swal.fire({
+    title: 'Estas seguro/a?',
+    text: "Estas a punto de vaciar el carrito de compras!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Si, eliminar!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Eliminado!',
+        'Tu carrito de compras ha sido vaciado',
+        'Realizado con éxito'
+      )
+    }
+  })
+  carrito.length = 0;
+  actCarrito();
+})
+
+
+
+
+
 listaProductos.forEach((producto) =>{
   const div = document.createElement('div');
   div.classList.add('producto');
@@ -56,8 +98,23 @@ listaProductos.forEach((producto) =>{
 const agregarCarrito = (prodId) => {
   const item = listaProductos.find((prod) => prod.id === prodId);
   carrito.push(item);
-  console.log(carrito);
   actCarrito();
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+  
+  Toast.fire({
+    icon: 'success',
+    title: 'Producto agregado al carrito con éxito'
+  })
 }
 
 //eliminar del carrito
@@ -68,6 +125,8 @@ const eliminarDelCarrito = (prodId) =>{
   carrito.splice(indice, 1);
   actCarrito();
 }
+
+
 
 //agregar al carrito
 
@@ -84,14 +143,20 @@ const actCarrito = () => {
                     <button onclick ="eliminarDelCarrito(${prod.id})" class="boton-eliminar">X</button>
                     `
                     contenedorCarrito.appendChild(div2);
+                    
   })
-
+  contadorCarrito.innerText = carrito.length;
+  precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0);
+  
 }
+
+
+
 
 
 //seccion admin
 //sessionStorage
-let user;
+/* let user;
 let pais;
 let userStorage = sessionStorage.getItem("usuario");
 let paisUserStorage = sessionStorage.getItem("pais");
@@ -115,7 +180,7 @@ if(userStorage){
     pais = prompt("Ingrese su país")
    
 } 
-
+ */
 /* 
 let nombreCompletoUser = sessionStorage.setItem("usuario", user);
 let paisCompletoUser = sessionStorage.setItem("pais", pais); */
@@ -123,20 +188,20 @@ let paisCompletoUser = sessionStorage.setItem("pais", pais); */
 console.log(typeof(nombreCompletoUser)); */
 
 //localStorage - guardar productos 
-localStorage.setItem("listaProductos", JSON.stringify(listaProductos));
+//localStorage.setItem("listaProductos", JSON.stringify(listaProductos));
 
 
 //imprimir los datos que se ingresan por prompt en el html user
-const h2divUsuario = document.getElementById("h2divUsuario");
+/* const h2divUsuario = document.getElementById("h2divUsuario");
 const h4divUsuario = document.getElementById("h4divUsuario");
 const btnRestablecerDatosUser = document.getElementById("btnRestablecerDatosUser");
 h2divUsuario.innerHTML += user;
 h4divUsuario.innerHTML += pais;
-
+ */
 
 
 //boton accion  restablecer datos usuario en sesion
-btnRestablecerDatosUser.addEventListener("click", (e) => {
+/* btnRestablecerDatosUser.addEventListener("click", (e) => {
     h2divUsuario.innerText = "";
     h4divUsuario.innerText = "";
     sessionStorage.clear();
@@ -159,7 +224,7 @@ btnRestablecerDatosUser.addEventListener("click", (e) => {
       })
 
 });
-
+ */
 //boton accion ingreso como admin
 //funcion para actualizar precio - admin
 /* function actPrecio (id, precio){
@@ -172,7 +237,7 @@ btnRestablecerDatosUser.addEventListener("click", (e) => {
 
 
 //boton acción ingreso admin
-const btnLogin  = document.getElementById("btnLogin");
+/* const btnLogin  = document.getElementById("btnLogin");
 btnLogin.addEventListener("click", (e) => {
   e.preventDefault();
   sessionStorage.clear();
@@ -184,7 +249,7 @@ btnLogin.addEventListener("click", (e) => {
   userAdmin = sessionStorage.setItem("usuarioAdmin", userAdmin);
   
   })
-
+ */
 
 //primer modelo para consultar productos a consultar disponibilidad
 const botonClickAca = document.getElementById("btnProducto1");
