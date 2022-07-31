@@ -251,22 +251,24 @@ btnLogin.addEventListener("click", (e) => {
   })
  */
 
-//primer modelo para consultar productos a consultar disponibilidad
+//PRIMER MODELO para consultar productos a consultar disponibilidad
+//edicion para colocar OPERADOR TERNARIO - LINEA 272 - 
+
 const botonClickAca = document.getElementById("btnProducto1");
 
 botonClickAca.addEventListener("click", (e) => {
    
   
    let mensaje1 = parseInt(prompt("¿Que producto deseas filtrar? 1-Paletas 2-Zapatillas"));
- 
+ /* 
    if (mensaje1 === 1){
     alert("Hiciste click en Paletas");
    }else if (mensaje1 === 2){
     alert("Hiciste click en Zapatillas");
    }else {
     alert("No seleccionaste correctarmente, apretar F5");
-   }
-  
+   } */
+  mensaje1 = mensaje1 === 1 ? alert("Hiciste click en Paletas") : alert("Hiciste click en Zapatillas");
 });
 
 

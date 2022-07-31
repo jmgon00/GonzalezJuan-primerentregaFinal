@@ -5,12 +5,68 @@ body{
     overflow-x: hidden;
     font-family: 'Bebas Neue', cursive;
     
+    
 }
 
 
+
+/**SLIDER*/
+.container-slider{
+    width: 90%;
+    width: 900px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 500px;
+    /* overflow: hidden; */
+    box-shadow: 0 0 0 1px #fff;
+    position: relative;
+}
+
+.slider{
+    display: flex;
+    width: 300%;
+    height: 400px;;
+    margin-left: -100%;
+    
+}
+.slider__section{
+    width: 100%;
+}
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider__btn{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255, 0.7);
+    top: 50%;
+    
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider__btn:hover{
+    background-color: white;
+}
+
+.slider__btn--right{
+   right: 5px;
+
+}
+.slider__btn--left{
+   left: 5px;
+}
 /* Navegador secundario */
 
-.navSecundario{
+/* .navSecundario{
     background-image: url(/img/fondo1.jpg);
    
     
@@ -25,7 +81,7 @@ body{
     filter: brightness(100%);
     text-shadow: 0 0 4px rgba(0, 0, 0, .7);
 }
-
+ */
 .pSection1{
     display: flex;
     margin-left: 50px;
@@ -39,7 +95,7 @@ body{
     margin-left: 50%;
     margin-bottom: 30px;
 } */
-
+/* 
 .divPrimeroDatosUser{
     display: flex;
     justify-content: center;
@@ -53,7 +109,7 @@ body{
     width: 600px;
    
     
-}
+} */
 /* .sectionContainerProductos{
     display: grid;
     justify-content: center;
@@ -103,6 +159,8 @@ body{
     margin-bottom: 20px;
     box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.6);
+    font-size: 30px;
+    text-align: center;
 }
 
 .precioProducto {
@@ -111,11 +169,12 @@ body{
 
 .imgProducto{
     object-fit: cover;
+    margin-bottom: 10px;
 }
 .boton-agregar {
     background-color: royalblue;
     color: white;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 700;
     padding: 5px;
     border: none;
@@ -140,6 +199,7 @@ body{
     transition: all .5s;
     opacity: 0;
     visibility: hidden;
+    font-size: 20px;
 }
 
 .modal-active {
@@ -198,14 +258,15 @@ body{
 }
 
 .boton-eliminar {
-    background-color: black;
+    background-color: rgb(217, 213, 213);
     color: white;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .boton-eliminar:hover {
     cursor: pointer;
+    background-color: black;
 }
 .boton-eliminar:focus {
     outline: none;
@@ -237,7 +298,7 @@ body{
 
 
 
-.btnAgregarCarrito{
+/* .btnAgregarCarrito{
     background-color: #a0aeb2;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -249,7 +310,7 @@ body{
 .btnAgregarCarrito:hover{
     background-color: white;
 }
-
+ */
 
 
 
@@ -262,7 +323,8 @@ body{
 .btnProductoOfertas:hover{
     color: rgb(197, 251, 1);
 }
-.productosCarrito{
+
+/* .productosCarrito{
     display: grid;
    
     text-align: center;
@@ -292,7 +354,7 @@ body{
 .productosCarrito h6{
     font-size: 10px;
     color: black;
-}
+} */
 
 /*formulario carrito de compras*/
 
