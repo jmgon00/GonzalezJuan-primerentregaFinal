@@ -15,10 +15,10 @@ body{
     width: 90%;
     width: 900px;
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     margin-left: 500px;
-    /* overflow: hidden; */
-    box-shadow: 0 0 0 1px #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 3px rgb(255, 255, 255, 0.7);
     position: relative;
 }
 
