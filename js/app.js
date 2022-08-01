@@ -236,20 +236,6 @@ h4divUsuario.innerHTML += pais;
 }; */
 
 
-//boton acción ingreso admin
-/* const btnLogin  = document.getElementById("btnLogin");
-btnLogin.addEventListener("click", (e) => {
-  e.preventDefault();
-  sessionStorage.clear();
-  let userAdmin = "admin";
-  let claveAdmin = 12345;
-  h2divUsuario.innerHTML = " ";
-  h4divUsuario.innerText = " ";
-  h2divUsuario.innerHTML += userAdmin;
-  userAdmin = sessionStorage.setItem("usuarioAdmin", userAdmin);
-  
-  })
- */
 
 //PRIMER MODELO para consultar productos a consultar disponibilidad
 //edicion para colocar OPERADOR TERNARIO - LINEA 272 - 
@@ -273,43 +259,4 @@ botonClickAca.addEventListener("click", (e) => {
 
 
 
-
-//evento input
-//let maxDigitos = document.getElementById("maxDigitos");
-
-//validacion para que no exceda el maximo de 15 caracteres
-/* maxDigitos.addEventListener("input", () => {
-     if (maxDigitos.value.length === 15){
-        alert("Te excediste de los 15 digitos")
-    }
-
-}); *//*Error no se valida en el segundo input con la misma clase la condicion******************/
-
-
-
-//evento submit
-//formulario contacto
-let form = document.getElementById("form");
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let info = e.target;
-    console.log("El nombre ingresado es: " + info.children[1].value);
-    console.log("El apellido ingresado es: " + info.children[2].value);
-    if (info.children[3].value.includes("@") && info.children[3].value.includes(".")){
-        /* alert("formulario enviado"); */
-        Swal.fire({
-          position: 'center',
-          icon: 'success',
-          title: 'Formulario enviado',
-          showConfirmButton: false,
-          timer: 1500
-        })
-
-    }else if(!info.children[3].value.includes("@")){
-        alert("El campo Email no contiene @");
-        info.children[3].value = "";
-        console.log("Correo electrónico incorrecto");
-        }
-    
-});
 

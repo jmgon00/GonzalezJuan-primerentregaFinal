@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primera entrega del Proyecto Final</title>
+    <title>Entrega del Proyecto Final</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,15 +12,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="/style.css">
-    <script defer src="stock.js"></script>
-    <script defer src="modal.js"></script>
-    <script defer src="app.js"></script>
-    <script defer src="slider.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/modal.js"></script>
+    <script defer src="/js/stock.js"></script>
+    <script defer src="/js/app.js"></script>
+    <script defer src="/js/slider.js"></script>
     
 </head>
 <body>
     <header class="header">
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">PADEL STORE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">CONOCE MAS SOBRE NUESTRA TIENDA</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.worldpadeltour.com/">WORLD PADEL TOUR</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Nosotros
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="/pages/contacto.html">Contacto</a></li>
+                    
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    
+                  </ul>
+                </li>
+              </ul>
+            
+            </div>
+          </div>
+        </div>
+      </nav>
         <!-- <nav class="navbar bg-light">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
@@ -33,20 +71,12 @@
               </form>
             </div>
         </nav> -->
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <h5 class="text-white h4">PADEL STORE</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
+        <div class="container-header">
+          <div class="section-header">
+           <img src="/img/banerpadel.png" alt="" class="img_baner--header">
           </div>
         </div>
-        <nav class="navbar navbar-dark bg-dark">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-        </nav>
-       
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
     </header>
     <main>
        <div class="container-slider">
@@ -101,14 +131,14 @@
                 <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
             </div>
           </div>
-          <form id="form" class="form">
+         <!--  <form id="form" class="form">
             <p class="pForm">Puedes ponerte en contacto con nosotros</p>
             <input type="text" placeholder="Nombre" id="nombreFormContacto" class="nombreFormContacto">
             <input type="text" placeholder="Apellido" id="apellidoFormContacto" class="apellidoFormContacto">
             <input type="text" placeholder="Correo electrónico" id="inputEmail" class="inputEmail">
             <input type="text" placeholder="Mensaje" class="inputTextForm">
             <input type="submit" value="Enviar" class="btnEnviarForm">
-          </form> 
+          </form>  -->
 
         </section>
        
