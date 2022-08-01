@@ -81,19 +81,27 @@ body{
 .container-header{
     width: 100%;
     height: 300px;
-    background-color: #1f1f1f; 
+    background-color: #20454b; 
+    margin-top: 30px;
     
    
 }
 .section-header{
-    width: 500px;
-    height: 300px;
+   
    
 
 }
 img_baner--header{
     
     object-fit: contain;
+}
+.h1-section_header{
+   background-color: white;
+   text-align: center;
+   margin-top: 15px;
+   font-size: 50px;
+   color: rgb(42, 152, 175);
+
 }
 
 /***********************************************************************************************************/
@@ -444,3 +452,23 @@ form input{
     font-size: 20px;
     color: white;
 } */
+.container-footer{
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+
+.section-footer{
+display: grid;
+width: 100%;
+height: 100%;
+grid-template-columns: repeat(3, 1fr);
+
+
+}
+
+.item-footer{
+    height: 100%;
+    
+    border: 5px solid rgb(216, 214, 214, 0.09);
+}
