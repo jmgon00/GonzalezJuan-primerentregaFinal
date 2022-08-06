@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
-    
+    <script src="https://kit.fontawesome.com/cff637fd2e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <script defer src="/js/modal.js"></script>
     <script defer src="/js/stock.js"></script>
@@ -81,7 +80,10 @@
         </div>
         <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
     </header>
+
     <main>
+      <div  id="form-usuario-acceso">
+      </div>
        <div class="container-slider">
           <div class="slider" id="slider">
             <div class="slider__section">
@@ -116,7 +118,7 @@
         </div> -->
         
         <section class="sectionForms">
-          <div class="divContainerProductos">
+          <div>
             <div id="contenedor-productos" class="divContainerProductos">
             </div>
             
@@ -132,6 +134,7 @@
                 </div>
                 <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
                 <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+                <button id="finalizar-compra" class="finalizar-compra" >Finalizar Compra</button>
             </div>
           </div>
          <!--  <form id="form" class="form">
@@ -147,29 +150,33 @@
        
 
     </main>
+      
+  <!-- footer -->
+  <div class="container-footer">
+    <div class="section-footer">
+      <div class="item-footer">
+        
+        <h2>Elegí cómo pagar</h2>
+        <p>Podés pagar con tarjeta, débito</p>
+      </div>
+      <div class="item-footer" id="footer-titulo"> 
+          <h2>PADEL STORE</h2>
+      </div>
+      <div class="item-footer"> 
+        
+        <h2>Seguridad, de principio a fin</h2>
+        <p>¿No te gusta? Estás siempre protegido.</p>
+      </div>
+
+    </div>
     
-<!-- footer -->
- <div class="container-footer">
-  <div class="section-footer">
-    <div class="item-footer">
-      <h2>CENTRO DE ENTRANEMIENTO</h2>
-      <img src="/img/" alt="">
-    </div>
-    <div class="item-footer"> 
-
-    </div>
-    <div class="item-footer"> 
-
-    </div>
-
   </div>
-  
- </div>
-    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <!-- <script src="/stock.js"></script>
-    <script src="app.js"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+      <!-- <script src="/stock.js"></script>
+      <script src="app.js"></script> -->
 </body>
 </html>
