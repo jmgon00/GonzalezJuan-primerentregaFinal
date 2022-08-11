@@ -1,20 +1,24 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: #20454b; 
+    background: #159957;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     overflow-x: hidden;
-    
-   
+    font-family: 'Montserrat', sans-serif;
     
 }
 
+
+
 /**SLIDER*/
 .container-slider{
-    width: 90%;
+    
     width: 900px;
-    margin-top: 20px;
+    /* margin-top: 20px;
     margin-bottom: 40px;
-    margin-left: 500px;
+    margin-left: 500px; */
+    margin: 100px auto;
     overflow: hidden;
     box-shadow: 0 0 0 3px rgb(255, 255, 255, 0.7);
     position: relative;
@@ -71,6 +75,32 @@ body{
     color: yellowgreen;
     
 }
+/*container ir al carrito*/
+
+.container-ir-al-carrito{
+    height: 300px;
+    display: block;
+    width: 100%;
+    
+    
+    
+    
+    
+}
+
+.btn-ir-al-carrito{
+   display: block;
+   width: 150px;
+   font-weight: 700;
+   background-color: white;
+   border-radius: 10px;
+   padding: 15px 30px;
+   margin: 15px auto;
+   text-align: center;
+    
+    
+
+}
 
 /*header*/
 .header{
@@ -78,24 +108,37 @@ body{
 }
 .container-header{
     width: 100%;
-    height: 300px;
-    background-color: #20454b; 
+    height: 100px;
+    background: #159957;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     margin-top: 30px;
     
    
 }
 
-img_baner--header{
+/* img_baner--header{
     
     object-fit: contain;
+} */
+
+.h1-section_ir-al-carrito{
+    text-align: center;
+    font-weight: lighter;
+   font-size: 30px;
+   color: white;
+   font-family: 'Bebas Neue', cursive;
+  
 }
 .h1-section_header{
-   background-color: white;
+  
    text-align: center;
-   margin-top: 15px;
+   margin-top: 100px;
    font-size: 50px;
-   color: rgb(42, 152, 175);
-   font-family: 'Bebas Neue', cursive;
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+
 
 }
 
@@ -133,10 +176,10 @@ img_baner--header{
     margin: 10px;
     margin-bottom: 20px;
     box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.3);
     font-size: 20px;
     text-align: center;
-    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    
     text-transform: uppercase;
 }
 
@@ -265,7 +308,7 @@ img_baner--header{
 #boton-carrito {
     border: none;
     color: royalblue;
-    font-size: 40px;
+    font-size: 35px;
     background-color: white;
     border-radius: 50%;
     padding: 10px 20px;
@@ -284,22 +327,29 @@ img_baner--header{
 .btnProductoOfertas{
     margin-bottom:50px;
     font-size: 40px;
-    background-color: rgb(48, 93, 50);
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-family:Arial, Helvetica, sans-serif
+    
 }
 
 .btnProductoOfertas:hover{
-    color: rgb(197, 251, 1);
+    color: rgb(255, 255, 255);
+    background-color: black;
 }
 
 /*formulario carrito de compras*/
 
 .sectionForms{
     
-    background-image: url(/img/fondo4.jpg);
+    /* background-image: url(/img/fondo4.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
-    
+    background-position: center center; */
+    background: #159957; 
+    background: -webkit-linear-gradient(to right, #155799, #159957); 
+    background: linear-gradient(to right, #155799, #159957);
 
+    
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -336,14 +386,18 @@ background-color: blueviolet;
 height: 200px;
 }
 
-
+.container-academia{
+    height: 800px;
+    width: 100%;
+   /*  background-color: red; */
+}
 /*formulario*/
 
 .form{
     display: flex;
     flex-direction: column;
     width: 700px;
-    margin-top: 400px;
+    margin-top: 100px;
     margin-bottom: 200px;
     
     font-size: 30px;
@@ -403,7 +457,7 @@ height: 200px;
     width: 100%;
     height: 100px;
     color: white;
-    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    
 }
 
 .section-footer{

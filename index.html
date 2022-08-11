@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrega del Proyecto Final</title>
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cff637fd2e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <script defer src="/js/modal.js"></script>
     <script defer src="/js/stock.js"></script>
     <script defer src="/js/app.js"></script>
-    <script defer src="/js/slider.js"></script>
-    
+    <script defer src="/js/slider.js"></script>  
 </head>
 <body>
     <header class="header">
@@ -73,8 +73,9 @@
         <div class="container-header">
           
           <div class="section-header">
-           <img src="/img/banerpadel.png" alt="" class="img_baner--header">
-           <h1 class="h1-section_header">LAS MEJORES MARCAS HASTA CON UN 50% OFF</h1>
+            <!--  <img src="/img/banerpadel.png" alt="" class="img_baner--header"> -->
+            <h1 class="h1-section_header">PADEL STORE</h1>
+            <h1 class="h1-section_ir-al-carrito">LAS MEJORES MARCAS HASTA CON UN 50% OFF</h1>
           </div>
           
         </div>
@@ -82,8 +83,7 @@
     </header>
 
     <main>
-      <div  id="form-usuario-acceso">
-      </div>
+      <!--slider-->
        <div class="container-slider">
           <div class="slider" id="slider">
             <div class="slider__section">
@@ -100,31 +100,27 @@
           </div>
 
         </div>
-       
-        <!-- <div class="divPrimeroDatosUser">
-          <div class="datosUser">
-            <div class="col"  >
-              <label >Usuario en sesion:</label>
-              <p type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="h2divUsuario">
-              </p>
-            </div>
-            <div class="col">
-              <label >Pais o Región:</label>
-              <p type="text" class="form-control" placeholder="País" aria-label="País"  id="h4divUsuario">
-              </p>
-            </div>
-          </div>
-            <button class="btn btn-secondary" id="btnRestablecerDatosUser">Restablecer datos</button>
-        </div> -->
+
         
-        <section class="sectionForms">
+       <div class="container-ir-al-carrito">
+       
+            <a class="btn-ir-al-carrito" href="#sectionForms">IR AL CARRITO</a>
+      <!--   <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn btn-primary" id="btn-ir-al-carrito" type="button">IR AL CARRITO</button>
+          
+        </div> -->
+       </div>
+       
+        <section class="sectionForms" id="sectionForms">
+          <!--contenedor productos-->
           <div>
             <div id="contenedor-productos" class="divContainerProductos">
             </div>
-            
           </div>
-          <button id="btnProducto1" class="btnProductoOfertas">CONSULTAR DISPONIBILIDAD</button>
-      
+          <button id="btnProducto1" class="btnProductoOfertas">ACADEMIA PADEL STORE</button>
+          <div class="container-academia" id="container-academia_id">
+
+          </div>
           <div class="modal-contenedor">
             <div class="modal-carrito">
                 <h3>Carrito</h3>
@@ -176,7 +172,6 @@
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-      <!-- <script src="/stock.js"></script>
-      <script src="app.js"></script> -->
+      
 </body>
 </html>
