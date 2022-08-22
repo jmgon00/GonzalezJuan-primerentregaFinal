@@ -10,27 +10,14 @@ const precioTotal = document.getElementById("precioTotal");
 
 let carrito = [];
 
-/* listaProductos.forEach((producto) =>{
-  const div = document.createElement('div');
-  div.classList.add('producto');
-  div.innerHTML = `
-                <img src=${producto.img} class="imgProducto">
-                <h3>${producto.nombre}</h3>
-                <p>${producto.descripcion}</p>
-                <p class="precioProducto">Precio:$${producto.precio}</p>
-                <button id="agregar${producto.id}" class="boton-agregar">Agregar</button>
-  `
-  contenedorProductos.appendChild(div);
-  const botonAgregar = document.getElementById(`agregar${producto.id}`);
-  botonAgregar.addEventListener('click', (e) =>{
-    agregarCarrito(producto.id);
-  })
-  
-}) */
-
-
+document.addEventListener('DOMContentLoaded', () =>{
+  if(localStorage.getItem('carrito')){
+    carrito = JSON.parse(localStorage.getItem('carrito'))
+    actCarrito();
+  }
+})
 //JSON
-
+//render de productos
 fetch ("/js/stock.json")
 .then(response => response.json())
 .then(productos =>{ 
@@ -55,13 +42,8 @@ fetch ("/js/stock.json")
    
     })
 
+/*vaciar carrito*/
 
-
-
-//
-
-
-//vaciar carrito 
 botonVaciar.addEventListener("click", () =>{
                     Swal.fire({
                       title: 'Estas seguro/a?',
@@ -81,79 +63,60 @@ botonVaciar.addEventListener("click", () =>{
                       }
                     })
                     carrito.length = 0;
+                    localStorage.clear();
                     actCarrito();
                     
 })
 
 const agregarCarrito = (prodId) => {
-                    const item = productos.find((prod) => prod.id === prodId);
-                    carrito.push(item);
-                    console.log(carrito);
-                    actCarrito();
-                    const Toast = Swal.mixin({
-                      toast: true,
-                      position: 'top-end',
-                      showConfirmButton: false,
-                      timer: 2000,
-                      timerProgressBar: true,
-                      didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                      }
-                    })
-                    
-                    Toast.fire({
-                      icon: 'success',
-                      title: 'Producto agregado al carrito con éxito'
-                    })
+  
+  const item = productos.find((prod) => prod.id === prodId);
+  carrito.push(item);
+  console.log(carrito);
+  actCarrito();
+  const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 2000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+  toast.addEventListener('mouseenter', Swal.stopTimer)
+  toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+  })
+                      
+  Toast.fire({
+  icon: 'success',
+  title: 'Producto agregado al carrito con éxito'
+  })
 }
 
 
 
-                    //PRIMER MODELO para consultar productos a consultar disponibilidad
-                    //edicion para colocar OPERADOR TERNARIO - LINEA 272 - 
-/* 
-                    const botonClickAca = document.getElementById("btnProducto1");
+//funciones asincronas y localStorage
 
-                    botonClickAca.addEventListener("click", (e) => {
-                    
-                    
-                    let mensaje1 = parseInt(prompt("¿Que producto deseas filtrar? 1-Paletas 2-Zapatillas"));
-                    
-                    if (mensaje1 === 1){
-                      alert("Hiciste click en Paletas");
-                    }else if (mensaje1 === 2){
-                      alert("Hiciste click en Zapatillas");
-                    }else {
-                      alert("No seleccionaste correctarmente, apretar F5");
-                    }
-                    });
+function cargarLocalStorage(){
+return new Promise ((resolve, reject)=>{
+console.log("Cargando productos..");
+setTimeout(()=>{
+resolve(productos);
+localStorage.getItem("productos");
+}, 1500)
+})
+}
 
-
- */
-
-                  //funciones asincronas y localStorage
-
-                  function cargarLocalStorage(){
-                    return new Promise ((resolve, reject)=>{
-                      console.log("Cargando productos..");
-                      setTimeout(()=>{
-                        resolve(productos);
-                        localStorage.getItem("productos");
-                      }, 1500)
-                    })
-                  }
-
-                  cargarLocalStorage().then(datos=>{
-                    console.log(datos);
-                  });
-
-                  localStorage.setItem("listaProductos", JSON.stringify(listaProductos));
-                 
+cargarLocalStorage().then(datos=>{
+console.log(datos);
+});
+localStorage.setItem("listaProductos", JSON.stringify(listaProductos));               
 })
 
 
-//eliminar del carrito
+
+/////carrito de compras (eliminar y actualizar )/////
+
+/*eliminar del carrito*/
 
 const eliminarDelCarrito = (prodId) =>{
   const item2 = carrito.find((prod) => prod.id === prodId);
@@ -162,9 +125,7 @@ const eliminarDelCarrito = (prodId) =>{
   actCarrito();
 }
 
-
-
-//agregar al carrito
+/*agregar al carrito*/
 
 const actCarrito = () => {
   contenedorCarrito.innerHTML="";
@@ -179,6 +140,7 @@ const actCarrito = () => {
                     <button onclick ="eliminarDelCarrito(${prod.id})" class="boton-eliminar">X</button> 
                     `
                     contenedorCarrito.appendChild(div2);
+                    localStorage.setItem('carrito', JSON.stringify(carrito));
                    
   })
   contadorCarrito.innerText = carrito.length;
@@ -187,7 +149,7 @@ const actCarrito = () => {
   
 }
 
-//finalizar compra
+/*finalizar compra*/
 
 botonFinalizar.addEventListener("click", () =>{
   Swal.fire({
@@ -201,8 +163,8 @@ botonFinalizar.addEventListener("click", () =>{
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire(
-        'Tus productos ya están en camino',
-        'Te estará llegando un correo electrónico con toda la información',
+        'Tus productos ya están reservados',
+        'Te estará llegando un correo electrónico con toda la información para finalizar la compra',
         'Realizado con éxito'
       )
     }
